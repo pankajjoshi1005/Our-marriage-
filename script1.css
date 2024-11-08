@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(circle, #ffe6f0, #ffb3c6);
+}
+
+.heart-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2017/08/30/06/48/background-2692760_1280.png') repeat center;
+    opacity: 0.1;
+    z-index: -2;
+}
+
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2018/08/03/07/32/balloon-3573479_960_720.png') repeat-y center;
+    background-size: 200px;
+    animation: floatBalloons 8s linear infinite;
+    z-index: -1;
+}
+
+@keyframes floatBalloons {
+    0% { background-position: 0 100%; }
+    100% { background-position: 0 -100%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 2.2rem;
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#quote {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.sticker-container img {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+}
