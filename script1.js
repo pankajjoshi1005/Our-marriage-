@@ -31,9 +31,27 @@ const quotes = [
     "You make my heart smile every single day.",
     "I fell in love with you, not for how you look, but for who you are.",
     "Being with you feels like home.",
-    "My heart is perfect because you are inside."
+    "My heart is perfect because you are inside.",
+    "You are my today and all of my tomorrows.",
+    "In you, I’ve found the love of my life and my closest friend.",
+    "You are the peace I crave in this chaotic world.",
+    "Your smile is my favorite hello and hardest goodbye.",
+    "Love isn’t something you find; it’s something that finds you.",
+    "My heart is, and always will be, yours.",
+    "I saw that you were perfect, and I loved you. Then I saw you weren’t, and I loved you even more.",
+    "With you, every moment feels like a beautiful dream.",
+    "I love you not only for who you are but for who I am when I’m with you.",
+    "You are the best thing I never planned.",
+    "Your love is the journey I never want to end.",
+    "I’d choose you in every lifetime.",
+    "Home is wherever I’m with you.",
+    "Your love is the light that guides me through my darkest days.",
+    "You’re the reason I look down at my phone and smile.",
+    "I fall in love with you more every day.",
+    "You are the missing piece I never knew I was searching for.",
+    "Your love makes my world go round.",
+    "My heart beats for you, now and forever."
 ];
-
 function displayQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     document.getElementById('quote').innerHTML = `"${quotes[randomIndex]}"`;
