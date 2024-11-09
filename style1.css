@@ -32,7 +32,7 @@ body {
     background: url('https://cdn.pixabay.com/photo/2018/08/03/07/32/balloon-3573479_960_720.png') repeat-y center;
     background-size: 200px;
     animation: floatBalloons 8s linear infinite;
-    z-index: -1;
+    z-index: 999;
 }
 
 @keyframes floatBalloons {
@@ -84,6 +84,7 @@ h2 {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 500;
 }
 
 #fireworks {
