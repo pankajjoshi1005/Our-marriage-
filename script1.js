@@ -1,6 +1,6 @@
 // Countdown Timer
 function countdown() {
-    const targetDate = new Date("Nov 12, 2024 16:01:00").getTime();
+    const targetDate = new Date("Nov 12, 2024 12:00:00").getTime();
     const now = new Date().getTime();
     const distance = targetDate - now;
 
