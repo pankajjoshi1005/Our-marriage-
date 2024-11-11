@@ -15,6 +15,8 @@ function countdown() {
     if (distance < 0) {
         clearInterval(interval);
         document.getElementById('countdown').innerHTML = "Congratulations! You're married!";
+        launchFireworks();
+        playVideo();
     }
 }
 
@@ -25,12 +27,7 @@ const quotes = [
     "Together is a wonderful place to be.",
     "Every love story is beautiful, but ours is my favorite.",
     "You are the sunshine that makes my day.",
-    "You have my whole heart, for my whole life.",
-    "Our journey together begins soon, and I can't wait.",
-    "You make my heart smile every single day.",
-    "I fell in love with you, not for how you look, but for who you are.",
-    "Being with you feels like home.",
-    "My heart is perfect because you are inside."
+    "You have my whole heart, for my whole life."
 ];
 
 function displayQuote() {
@@ -39,3 +36,33 @@ function displayQuote() {
 }
 
 window.onload = displayQuote;
+
+// Fireworks Animation
+function launchFireworks() {
+    const canvas = document.getElementById('fireworks');
+    const ctx = canvas.getContext('2d');
+    canvas.style.display = 'block';
+
+    let particles = [];
+    const explode = (x, y) => {
+        for (let i = 0; i < 100; i++) {
+            const angle = Math.random() * Math.PI * 2;
+            const speed = Math.random() * 5 + 2;
+            particles.push({
+                x: x,
+                y: y,
+                dx: Math.cos(angle) * speed,
+                dy: Math.sin(angle) * speed
+            });
+        }
+    };
+    explode(canvas.width / 2, canvas.height / 2);
+}
+
+// Play Google Drive Video
+function playVideo() {
+    const videoContainer = document.getElementById('video-container');
+    videoContainer.style.display = 'block';
+    const video = document.getElementById('wedding-video');
+    video.src += "&autoplay=1";
+}
