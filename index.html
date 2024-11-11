@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalapana & Pankaj's Wedding Countdown</title>
+    <title>Kalapana ❤️ Pankaj Wedding Countdown</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,8 @@
 </head>
 <body>
     <div class="heart-background"></div>
+    <div class="balloons"></div>
+    
     <div class="container">
         <h1>Kalapana ❤️ Pankaj</h1>
         <h2>Our Wedding Countdown</h2>
@@ -19,11 +21,15 @@
         
         <div id="quote"></div>
         
-        <div class="image-frame">
-            <img src="image1.png" alt="Kalapana" class="love-image">
-            <img src="image2.jpeg" alt="Pankaj" class="love-image">
+        <!-- Google Drive Video (hidden by default) -->
+        <div id="video-container">
+            <iframe id="wedding-video" 
+                    src="https://drive.google.com/file/d/FILE_ID/preview" 
+                    frameborder="0" allow="autoplay" allowfullscreen></iframe>
         </div>
     </div>
+
+    <canvas id="fireworks"></canvas>
 
     <script src="script.js"></script>
 </body>
