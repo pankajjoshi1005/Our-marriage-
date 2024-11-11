@@ -104,3 +104,13 @@ function launchFireworks() {
     explode(canvas.width / 2, canvas.height / 2);
     animate();
 }
+
+function showCelebration() {
+    document.getElementById('sticker-container').style.display = 'none';
+    const celebrationMessage = document.getElementById('celebration-message');
+    celebrationMessage.style.display = 'block';
+    celebrationMessage.innerHTML = 
+        "💖 You are mine! 💖<br> Let's celebrate our eternal love! 🎉";
+
+    displayHeartQuotes();
+}
