@@ -6,12 +6,12 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     overflow: hidden;
-    background-color: #fdf3f7;
+    background: radial-gradient(circle, #ffe6f0, #ffb3c6);
 }
 
 .heart-background {
@@ -22,38 +22,52 @@ body {
     height: 100%;
     background: url('https://cdn.pixabay.com/photo/2017/08/30/06/48/background-2692760_1280.png') repeat center;
     opacity: 0.1;
+    z-index: -2;
+}
+
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2018/08/03/07/32/balloon-3573479_960_720.png') repeat-y center;
+    background-size: 200px;
+    animation: floatBalloons 8s linear infinite;
     z-index: -1;
 }
 
+@keyframes floatBalloons {
+    0% { background-position: 0 100%; }
+    100% { background-position: 0 -100%; }
+}
+
 .container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
     width: 90%;
-    animation: fadeIn 2s ease-in-out;
 }
 
 h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #e74c3c;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: #34495e;
-    font-size: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
 #countdown {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #27ae60;
-    margin-bottom: 20px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 #quote {
@@ -63,28 +77,23 @@ h2 {
     padding: 0 20px;
 }
 
-.image-frame {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+#video-container {
+    display: none; /* Hidden until countdown ends */
     margin-top: 20px;
 }
 
-.love-image {
-    width: 120px;
-    height: 150px;
-    object-fit: cover;
-    border: 5px solid #e74c3c;
-    border-radius: 15px;
-    transition: transform 0.3s;
+iframe {
+    width: 560px;
+    height: 315px;
+    border-radius: 10px;
 }
 
-.love-image:hover {
-    transform: scale(1.1);
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
 }
